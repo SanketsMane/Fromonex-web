@@ -125,13 +125,14 @@ export const scrollReveal = {
 
 // Card hover effects
 export const cardHover = {
-  rest: { scale: 1 },
-  hover: {
+  initial: { scale: 1 },
+  animate: { scale: 1 },
+  whileHover: {
     scale: 1.02,
     y: -5,
     transition: {
       duration: 0.3,
-      ease: [0.4, 0.0, 0.2, 1]
+      type: "tween"
     }
   }
 };

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { services } from '../data/services';
-import { fadeInUp, staggerContainer, cardHover, hoverGlow } from '../utils/animations';
+import { fadeInUp, staggerContainer, hoverGlow } from '../utils/animations';
 
 const ServicesSection = () => {
   const serviceIcons = {
@@ -83,7 +83,11 @@ const ServicesSection = () => {
                 className="group relative"
               >
                 <motion.div
-                  variants={cardHover}
+                  whileHover={{
+                    scale: 1.02,
+                    y: -5,
+                    transition: { duration: 0.3 }
+                  }}
                   className="relative p-8 h-full bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden"
                 >
                   {/* Background Gradient */}
@@ -124,17 +128,6 @@ const ServicesSection = () => {
                         </li>
                       ))}
                     </ul>
-
-                    {/* Pricing */}
-                    {service.pricing && (
-                      <div className="mb-6">
-                        <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">Starting from</div>
-                        <div className="text-3xl font-bold text-gray-900 dark:text-white">
-                          ${service.pricing.basic}
-                          <span className="text-lg font-normal text-gray-500 dark:text-gray-400">/month</span>
-                        </div>
-                      </div>
-                    )}
 
                     {/* CTA */}
                     <motion.button

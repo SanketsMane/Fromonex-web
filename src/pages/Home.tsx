@@ -1,17 +1,17 @@
-import HeroSection from '../components/HeroSection';
-import ServicesSection from '../components/ServicesSection';
-import AboutSection from '../components/AboutSection';
-import TestimonialsSection from '../components/TestimonialsSection';
-import ContactSection from '../components/ContactSection';
+import AdvancedHeroSection from '../components/AdvancedHeroSection';
+import AdvancedServicesSection from '../components/AdvancedServicesSection';
+import AdvancedAboutSection from '../components/AdvancedAboutSection';
+import AdvancedTestimonialsSection from '../components/AdvancedTestimonialsSection';
+import AdvancedContactSection from '../components/AdvancedContactSection';
 
 const Home = () => {
   return (
     <>
-      <HeroSection />
-      <ServicesSection />
-      <AboutSection />
-      <TestimonialsSection />
-      <ContactSection />
+      <AdvancedHeroSection />
+      <AdvancedServicesSection />
+      <AdvancedAboutSection />
+      <AdvancedTestimonialsSection />
+      <AdvancedContactSection />
     </>
   );
 };

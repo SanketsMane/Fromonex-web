@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { Float, Text3D, OrbitControls } from '@react-three/drei';
 import { 
   SparklesIcon, 
   ArrowRightIcon, 
@@ -24,25 +22,6 @@ const AdvancedHeroSection = () => {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
-
-  const FloatingText = () => (
-    <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
-      <Text3D
-        font="/fonts/helvetiker_regular.typeface.json"
-        size={1}
-        height={0.2}
-        curveSegments={12}
-        bevelEnabled
-        bevelThickness={0.02}
-        bevelSize={0.02}
-        bevelOffset={0}
-        bevelSegments={5}
-      >
-        FORMONEX
-        <meshNormalMaterial />
-      </Text3D>
-    </Float>
-  );
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -195,19 +174,34 @@ const AdvancedHeroSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Content - 3D Scene */}
+          {/* Right Content - Simplified 3D Effect */}
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="h-96 lg:h-[600px] relative"
+            className="relative h-96 lg:h-[600px]"
           >
-            <Canvas camera={{ position: [0, 0, 5] }}>
-              <ambientLight intensity={0.5} />
-              <pointLight position={[10, 10, 10]} />
-              <FloatingText />
-              <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={2} />
-            </Canvas>
+            {/* Animated 3D Logo */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <motion.div
+                animate={{ 
+                  rotateY: [0, 360],
+                  scale: [1, 1.1, 1]
+                }}
+                transition={{ 
+                  duration: 10, 
+                  repeat: Infinity,
+                  ease: "linear"
+                }}
+                className="text-8xl font-black text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text"
+                style={{ 
+                  textShadow: "0 0 50px rgba(59, 130, 246, 0.5)",
+                  transform: "perspective(1000px) rotateX(15deg)"
+                }}
+              >
+                FORMONEX
+              </motion.div>
+            </div>
 
             {/* Glassmorphism Cards */}
             <div className="absolute inset-0 flex items-center justify-center">

@@ -1,149 +1,144 @@
 export const companyInfo = {
   name: "Formonex",
   tagline: "Smarter IT, Stronger Growth",
-  description: "Welcome to Formonex, where we empower businesses with custom software and strategic digital marketing solutions. Our expertise includes digital marketing, data analytics, web development, and app development, all designed to enhance your brand's visibility and user experience.",
+  description: "Integrating IT solutions, data analytics, and creative development.",
   mission: "Driving Innovation, Empowering Success",
-  established: "2020",
-  employees: "50+",
-  projects: "200+",
-  clients: "150+",
   email: "contact@formonex.com",
   phone: "+91 95355 08952",
+  projects: "200+",
+  clients: "150+",
+  employees: "50+",
+  contact: {
+    phone: "+91 95355 08952",
+    email: "contact@formonex.com"
+  },
+  officeHours: "Mon-Sat 9:00 - 7:00",
   address: {
     full: "Clayworks create Campus, 11KM, Arakere Bannerghatta Rd, Omkar Nagar, Arekere, Bengaluru, Karnataka 560076",
-    business: "22nd Floor, 26/1, WTC, Brigade Gateway, Dr. Rajkumar Rd, Malleshwaram, Bengaluru, Karnataka 560055",
     city: "Bengaluru",
     state: "Karnataka",
     country: "India",
     pincode: "560076"
-  },
-  contact: {
-    email: "contact@formonex.com",
-    info: "info@formonex.com", 
-    careers: "careers@formonex.com",
-    phone: "+91 95355 08952"
   },
   social: {
     facebook: "http://facebook.com/",
     twitter: "http://twitter.com/",
     instagram: "https://www.instagram.com/",
     pinterest: "https://www.pinterest.com/"
-  },
-  officeHours: "Mon-Sat 9:00 - 7:00",
-  workingHours: "08:00 am - 06:00 pm"
+  }
 };
 
 export const services = [
   {
+    id: "software-development",
+    title: "Software Development",
+    icon: "�",
+    description: "Custom software solutions built with cutting-edge technologies to meet your unique business requirements.",
+    features: [
+      "Custom Software Development",
+      "Enterprise Applications",
+      "Legacy System Modernization",
+      "API Development & Integration",
+      "Quality Assurance & Testing",
+      "Software Maintenance & Support"
+    ]
+  },
+  {
+    id: "web-development",
+    title: "Web Development",
+    icon: "🌐",
+    description: "Modern, responsive, and scalable web applications tailored to your business needs.",
+    features: [
+      "Custom Web Applications",
+      "E-commerce Solutions",
+      "Content Management Systems",
+      "Progressive Web Apps",
+      "Website Optimization",
+      "Web Security Implementation"
+    ]
+  },
+  {
     id: "digital-marketing",
     title: "Digital Marketing",
-    icon: "📱",
+    icon: "�",
     description: "Comprehensive digital marketing strategies to boost your online presence and drive business growth.",
     features: [
       "Search Engine Optimization (SEO)",
       "Social Media Marketing",
       "Pay-Per-Click (PPC) Advertising",
       "Content Marketing",
-      "Email Marketing",
-      "Analytics & Reporting"
+      "Email Marketing Campaigns",
+      "Analytics & Performance Tracking"
     ]
   },
   {
-    id: "data-analytics",
-    title: "Data Analytics",
-    icon: "📊",
-    description: "Transform your data into actionable insights with our advanced analytics solutions.",
+    id: "data-science",
+    title: "Data Science",
+    icon: "�",
+    description: "Transform raw data into valuable insights using advanced statistical methods and machine learning techniques.",
     features: [
-      "Business Intelligence",
+      "Data Mining & Analysis",
+      "Statistical Modeling",
       "Predictive Analytics",
       "Data Visualization",
       "Big Data Processing",
-      "Machine Learning Models",
-      "Custom Dashboards"
+      "Business Intelligence Solutions"
     ]
   },
   {
-    id: "web-development",
-    title: "Web Development",
-    icon: "💻",
-    description: "Modern, responsive, and scalable web applications tailored to your business needs.",
+    id: "ai-ml",
+    title: "Artificial Intelligence & Machine Learning",
+    icon: "🤖",
+    description: "Leverage AI and ML technologies to automate processes, enhance decision-making, and drive innovation.",
     features: [
-      "Custom Web Applications",
-      "E-commerce Solutions",
-      "Content Management Systems",
-      "API Development",
-      "Progressive Web Apps",
-      "Website Maintenance"
-    ]
-  },
-  {
-    id: "app-development",
-    title: "App Development",
-    icon: "📱",
-    description: "Native and cross-platform mobile applications for iOS and Android.",
-    features: [
-      "Native iOS/Android Apps",
-      "Cross-platform Development",
-      "UI/UX Design",
-      "App Store Optimization",
-      "Mobile App Testing",
-      "App Maintenance & Support"
-    ]
-  },
-  {
-    id: "seo-optimization",
-    title: "SEO Optimization",
-    icon: "🔍",
-    description: "Improve your search engine rankings and increase organic traffic to your website.",
-    features: [
-      "Keyword Research",
-      "On-page Optimization",
-      "Technical SEO",
-      "Link Building",
-      "Local SEO",
-      "SEO Audits"
+      "Machine Learning Model Development",
+      "Natural Language Processing",
+      "Computer Vision Solutions",
+      "AI-Powered Automation",
+      "Intelligent Chatbots",
+      "Deep Learning Applications"
     ]
   },
   {
     id: "custom-erp-crm",
-    title: "Custom ERP/CRM Solutions",
+    title: "ERP/CRM Solutions",
     icon: "⚙️",
-    description: "Streamline your business processes with custom ERP and CRM solutions.",
+    description: "Streamline your business processes with custom ERP and CRM solutions designed for efficiency.",
     features: [
       "Custom ERP Development",
       "CRM Implementation",
-      "Process Automation",
-      "Integration Services",
-      "Training & Support",
-      "System Migration"
+      "Business Process Automation",
+      "System Integration Services",
+      "User Training & Support",
+      "Data Migration & Setup"
     ]
   },
   {
     id: "cloud-integration",
     title: "Cloud Integration",
     icon: "☁️",
-    description: "Migrate and integrate your business systems to the cloud for better scalability.",
+    description: "Migrate and integrate your business systems to the cloud for better scalability and flexibility.",
     features: [
-      "Cloud Migration",
-      "Multi-cloud Strategy",
-      "Cloud Security",
-      "DevOps Services",
-      "Monitoring & Support",
-      "Cost Optimization"
+      "Cloud Migration Strategy",
+      "Multi-cloud Architecture",
+      "Cloud Security Solutions",
+      "DevOps & CI/CD",
+      "Cloud Monitoring & Support",
+      "Cost Optimization Services"
     ]
   },
   {
-    id: "ai-automation",
-    title: "AI and Automation",
-    icon: "🤖",
-    description: "Leverage AI and automation to improve efficiency and reduce operational costs.",
+    id: "automation-services",
+    title: "Automation Services",
+    icon: "🔄",
+    description: "Automate repetitive tasks and workflows to improve efficiency and reduce operational costs.",
     features: [
-      "AI/ML Development",
-      "Process Automation",
-      "Chatbot Development",
-      "RPA Implementation",
-      "Intelligent Analytics",
-      "AI Strategy Consulting"
+      "Robotic Process Automation (RPA)",
+      "Workflow Automation",
+      "Business Process Optimization",
+      "Integration Automation",
+      "Testing Automation",
+      "Monitoring & Maintenance"
     ]
   }
 ];

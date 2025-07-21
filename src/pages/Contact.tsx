@@ -94,24 +94,17 @@ const Contact = () => {
   const offices = [
     {
       city: "Bengaluru",
-      address: typeof companyInfo.address === 'string' ? companyInfo.address : companyInfo.address.full,
-      phone: companyInfo.phone,
-      email: companyInfo.email,
+      address: "Clayworks Create Campus, 11KM, Arakere Bannerghatta Rd, Omkar Nagar, Arekere, Bengaluru, Karnataka 560076",
+      phone: "+91 95355 08952",
+      email: "contact@formonex.com",
       image: "/images/office-bangalore.jpg"
     },
     {
-      city: "Mumbai",
-      address: "Tech Park, Bandra Kurla Complex, Mumbai, Maharashtra 400051",
-      phone: "+91 95355 08953",
-      email: "mumbai@formonex.com",
-      image: "/images/office-mumbai.jpg"
-    },
-    {
-      city: "Delhi",
-      address: "Cyber City, Gurgaon, Haryana 122002",
-      phone: "+91 95355 08954",
-      email: "delhi@formonex.com",
-      image: "/images/office-delhi.jpg"
+      city: "Pune",
+      address: "Office No 812, Global Business Hub, EON Free Zone, Kharadi, Pune, Maharashtra 411014",
+      phone: "+91 95355 08952",
+      email: "contact@formonex.com",
+      image: "/images/office-pune.jpg"
     }
   ];
 
@@ -497,32 +490,56 @@ const Contact = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {offices.map((office, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
-                className="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
+                transition={{ delay: index * 0.2 }}
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 group"
               >
-                <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                  <h3 className="text-2xl font-bold text-white">{office.city}</h3>
+                <div className="h-48 bg-gradient-to-br from-blue-500 via-purple-600 to-indigo-600 flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-black/20"></div>
+                  <div className="relative z-10 text-center">
+                    <MapPinIcon className="w-12 h-12 text-white/80 mx-auto mb-2" />
+                    <h3 className="text-2xl font-bold text-white">{office.city} Office</h3>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                 </div>
-                <div className="p-6">
-                  <div className="space-y-4">
+                <div className="p-8">
+                  <div className="space-y-6">
                     <div className="flex items-start">
-                      <MapPinIcon className="w-5 h-5 text-gray-500 mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-gray-600 dark:text-gray-300">{office.address}</span>
+                      <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                        <MapPinIcon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Address</h4>
+                        <span className="text-gray-600 dark:text-gray-300 leading-relaxed">{office.address}</span>
+                      </div>
                     </div>
                     <div className="flex items-center">
-                      <PhoneIcon className="w-5 h-5 text-gray-500 mr-3 flex-shrink-0" />
-                      <span className="text-gray-600 dark:text-gray-300">{office.phone}</span>
+                      <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                        <PhoneIcon className="w-5 h-5 text-green-600 dark:text-green-400" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Phone</h4>
+                        <a href={`tel:${office.phone}`} className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                          {office.phone}
+                        </a>
+                      </div>
                     </div>
                     <div className="flex items-center">
-                      <EnvelopeIcon className="w-5 h-5 text-gray-500 mr-3 flex-shrink-0" />
-                      <span className="text-gray-600 dark:text-gray-300">{office.email}</span>
+                      <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                        <EnvelopeIcon className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Email</h4>
+                        <a href={`mailto:${office.email}`} className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                          {office.email}
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -1,67 +1,57 @@
-export interface Testimonial {
-  id: number;
-  name: string;
-  position: string;
-  company: string;
-  image: string;
-  rating: number;
-  text: string;
-}
-
-export const testimonials: Testimonial[] = [
+export const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    position: "CEO",
-    company: "TechStart Inc.",
-    image: "/images/testimonials/sarah.png",
+    name: "Ramesh Kumar",
+    position: "Founder & CEO",
+    company: "TechNova Solutions",
+    image: "/images/testimonials/ramesh.png",
     rating: 5,
-    text: "Formonex transformed our digital presence completely. Their team's expertise in web development and digital marketing helped us increase our online sales by 300% within 6 months."
+    text: "Formonex transformed our business with their exceptional software development services. Their team delivered a robust ERP solution that streamlined our operations and improved efficiency by 40%. Highly recommended!"
   },
   {
     id: 2,
-    name: "Michael Chen",
-    position: "CTO",
-    company: "DataFlow Solutions",
-    image: "/images/testimonials/michael.png",
+    name: "Priya Iyer",
+    position: "Digital Marketing Consultant",
+    company: "MarketNest Agency",
+    image: "/images/testimonials/priya.png",
     rating: 5,
-    text: "The data analytics solutions provided by Formonex gave us insights we never knew existed. Their custom dashboard helps us make data-driven decisions every day."
+    text: "Working with Formonex on our digital marketing strategy was incredible. Their data-driven approach and expertise in SEO helped increase our clients' organic traffic by 200%. Professional team with outstanding results."
   },
   {
     id: 3,
-    name: "Linda Rodriguez",
-    position: "Marketing Director",
-    company: "GrowthCorp",
-    image: "/images/testimonials/linda.png",
+    name: "Aniket Deshmukh",
+    position: "Chief Technology Officer",
+    company: "SoftSpark Technologies",
+    image: "/images/testimonials/aniket.png",
     rating: 5,
-    text: "Working with Formonex on our digital marketing strategy was a game-changer. Their SEO optimization increased our organic traffic by 250% in just 4 months."
+    text: "The AI and machine learning solutions provided by Formonex revolutionized our data processing capabilities. Their innovative approach and technical expertise exceeded our expectations. A true technology partner."
   },
   {
     id: 4,
-    name: "David Thompson",
-    position: "Founder",
-    company: "InnovateLab",
-    image: "/images/testimonials/testi-author-2.jpg",
+    name: "Swati Sharma",
+    position: "Product Manager",
+    company: "BizByte Innovations",
+    image: "/images/testimonials/swati.png",
     rating: 5,
-    text: "The mobile app developed by Formonex exceeded our expectations. The user experience is fantastic, and the app has been downloaded over 50,000 times in the first month."
+    text: "Formonex developed a fantastic web application for our business. The user interface is intuitive, performance is excellent, and their post-launch support has been exceptional. Great work team!"
   },
   {
     id: 5,
-    name: "Priya Sharma",
-    position: "Marketing Director",
-    company: "InnovateCorp",
-    image: "/images/testimonials/priya.png",
+    name: "Arjun Patel",
+    position: "Operations Director",
+    company: "CloudTech Systems",
+    image: "/images/testimonials/arjun.png",
     rating: 5,
-    text: "Working with Formonex on our digital marketing campaign was a game-changer. They developed a comprehensive strategy that increased our online visibility and customer engagement significantly."
+    text: "The cloud integration services by Formonex helped us migrate our entire infrastructure seamlessly. Their expertise in cloud technologies and DevOps practices saved us both time and costs significantly."
   },
   {
     id: 6,
-    name: "Rajesh Kumar",
-    position: "Business Owner",
-    company: "GrowthHub",
-    image: "/images/testimonials/rajesh.png",
+    name: "Kavita Nair",
+    position: "Data Analyst",
+    company: "InsightHub Analytics",
+    image: "/images/testimonials/kavita.png",
     rating: 5,
-    text: "The SEO optimization services from Formonex helped us rank on the first page of Google for our target keywords. Our organic traffic has increased by 200% in just 6 months."
+    text: "Formonex's data science solutions provided us with actionable insights that transformed our business strategy. Their custom analytics dashboard is user-friendly and incredibly powerful. Outstanding service!"
   }
 ];
 

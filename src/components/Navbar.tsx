@@ -13,9 +13,8 @@ const Navbar: React.FC = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'Projects', href: '/projects' },
+    { name: 'Testimonials', href: '/testimonials' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -26,13 +25,11 @@ const Navbar: React.FC = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <img
-              src="/images/logos/logo.png"
-              alt="Formonex"
-              className="h-8 w-auto"
-            />
-            <span className="font-heading font-bold text-xl text-primary-600">
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-r from-primary-600 to-blue-600 rounded-lg">
+              <span className="text-white font-bold text-xl">F</span>
+            </div>
+            <span className="font-heading font-bold text-xl text-primary-600 dark:text-primary-400">
               Formonex
             </span>
           </Link>

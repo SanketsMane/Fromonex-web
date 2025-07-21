@@ -20,6 +20,24 @@ export const companyInfo = {
     country: "India",
     pincode: "560076"
   },
+  offices: {
+    bengaluru: {
+      full: "ClayWorks Mini Forest, 3rd Floor, Site No. 74, 15th Cross Road, JP Nagar 3rd Phase, Sarakki Industrial Area, Bengaluru, Karnataka – 560078",
+      city: "Bengaluru",
+      state: "Karnataka",
+      country: "India",
+      pincode: "560078",
+      coordinates: { lat: 12.9187, lng: 77.5856 }
+    },
+    pune: {
+      full: "Office no 812, Global Business Hub, EON Free Zone, Kharadi, Pune, Maharashtra - 411014",
+      city: "Pune", 
+      state: "Maharashtra",
+      country: "India",
+      pincode: "411014",
+      coordinates: { lat: 18.5516, lng: 73.9352 }
+    }
+  },
   social: {
     facebook: "http://facebook.com/",
     twitter: "http://twitter.com/",

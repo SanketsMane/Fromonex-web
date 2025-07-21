@@ -48,11 +48,22 @@ const Footer: React.FC = () => {
                   {companyInfo.email}
                 </a>
               </div>
+              {/* Bengaluru Address */}
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-primary-400 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-300 text-sm leading-relaxed">
-                  {companyInfo.address.full}
-                </span>
+                <address className="text-gray-300 text-sm leading-relaxed not-italic">
+                  ClayWorks Mini Forest, 3rd Floor, Site No. 74,<br />
+                  15th Cross Road, JP Nagar 3rd Phase,<br />
+                  Sarakki Industrial Area, Bengaluru, Karnataka – 560078
+                </address>
+              </div>
+              {/* Pune Address */}
+              <div className="flex items-start space-x-3">
+                <MapPin className="h-5 w-5 text-primary-400 flex-shrink-0 mt-0.5" />
+                <address className="text-gray-300 text-sm leading-relaxed not-italic">
+                  Office no 812, Global Business Hub,<br />
+                  EON Free Zone, Kharadi, Pune, Maharashtra - 411014
+                </address>
               </div>
             </div>
           </div>

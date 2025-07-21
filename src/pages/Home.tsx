@@ -32,6 +32,7 @@ import {
 import { Link } from 'react-router-dom';
 import { services, companyInfo } from '../data/company';
 import { testimonials } from '../data/testimonials';
+import SEO from '../components/SEO';
 
 const Home: React.FC = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -141,6 +142,12 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 overflow-hidden">
+      <SEO 
+        title="Formonex | Top IT Company in Pune and Bengaluru"
+        description="Leading IT company delivering innovative solutions in AI, cloud computing, and digital transformation. Offices in Kharadi, Pune and JP Nagar, Bengaluru."
+        keywords="Top IT Company in Pune, Top IT Company in Bengaluru, Software Development in Kharadi Pune, AI/ML Services in JP Nagar Bengaluru, Cloud Integration, Digital Marketing, ERP CRM Solutions"
+        canonical="https://www.formonex.com"
+      />
       {/* Animated Background Elements */}
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>

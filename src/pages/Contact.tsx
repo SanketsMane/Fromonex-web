@@ -11,6 +11,7 @@ import {
 import { companyInfo } from '../data/company';
 import { fadeInUp, staggerContainer } from '../utils/animations';
 import { useState } from 'react';
+import SEO from '../components/SEO';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -166,6 +167,12 @@ const Contact = () => {
 
   return (
     <div className="pt-16">
+      <SEO 
+        title="Contact Formonex | IT Company in Pune & Bengaluru"
+        description="Contact Formonex for IT solutions. Offices in Kharadi, Pune and JP Nagar, Bengaluru. Software development, AI/ML, cloud services and more."
+        keywords="Contact IT Company Pune, Contact IT Company Bengaluru, Software Development Kharadi, AI ML Services JP Nagar, IT Solutions Contact"
+        canonical="https://www.formonex.com/contact"
+      />
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
@@ -584,6 +591,56 @@ const Contact = () => {
                 </p>
               </motion.div>
             ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* Office Addresses and Maps */}
+      <section className="py-20 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* Bengaluru Office */}
+            <div>
+              <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Bengaluru Office</h2>
+              <address className="not-italic text-gray-700 dark:text-gray-200 mb-4">
+                ClayWorks Mini Forest, 3rd Floor, Site No. 74,<br />
+                15th Cross Road, JP Nagar 3rd Phase,<br />
+                Sarakki Industrial Area, Bengaluru, Karnataka – 560078
+              </address>
+              <div className="rounded-xl overflow-hidden shadow-lg mb-4">
+                <iframe
+                  title="Bengaluru Office Map"
+                  src="https://www.google.com/maps?q=ClayWorks+Mini+Forest,+3rd+Floor,+Site+No.+74,+15th+Cross+Road,+JP+Nagar+3rd+Phase,+Sarakki+Industrial+Area,+Bengaluru,+Karnataka+560078&output=embed"
+                  width="100%"
+                  height="220"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+            {/* Pune Office */}
+            <div>
+              <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Pune Office</h2>
+              <address className="not-italic text-gray-700 dark:text-gray-200 mb-4">
+                Office no 812, Global Business Hub,<br />
+                EON Free Zone, Kharadi, Pune, Maharashtra - 411014
+              </address>
+              <div className="rounded-xl overflow-hidden shadow-lg mb-4">
+                <iframe
+                  title="Pune Office Map"
+                  src="https://www.google.com/maps?q=Global+Business+Hub,+EON+Free+Zone,+Kharadi,+Pune,+Maharashtra+411014&output=embed"
+                  width="100%"
+                  height="220"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </section>

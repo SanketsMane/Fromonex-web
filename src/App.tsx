@@ -8,6 +8,8 @@ import Services from './pages/Services';
 import Testimonials from './pages/Testimonials';
 import Contact from './pages/Contact';
 import Careers from './pages/Careers';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 function App() {
@@ -91,6 +93,8 @@ function App() {
                 <Route path="/testimonials" element={<Testimonials />} />
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms" element={<TermsOfService />} />
               </Routes>
             </main>
             <Footer />

@@ -120,6 +120,14 @@ const Footer: React.FC = () => {
                   Contact Us
                 </Link>
               </li>
+              <li>
+                <Link 
+                  to="/privacy-policy" 
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -205,7 +213,7 @@ const Footer: React.FC = () => {
               <span>© {currentYear} Formonex. All Rights Reserved.</span>
             </div>
             <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <Link to="/privacy" className="hover:text-white transition-colors">
+              <Link to="/privacy-policy" className="hover:text-white transition-colors">
                 Privacy Policy
               </Link>
               <Link to="/terms" className="hover:text-white transition-colors">

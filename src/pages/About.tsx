@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { CheckCircle, Trophy, Users, Rocket, Star, Target, BookOpen, Lightbulb, Zap, Globe, Shield, Award, ArrowRight, Sparkles } from 'lucide-react';
+import SEO from '../components/SEO';
+import { generateOrganizationSchema, generateBreadcrumbSchema } from '../utils/structuredData';
 
 const About = () => {
   const stats = [
@@ -63,8 +65,23 @@ const About = () => {
     { icon: Sparkles, label: "Innovation First", desc: "Cutting-edge solutions" }
   ];
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.formonex.com' },
+    { name: 'About Us', url: 'https://www.formonex.com/about' }
+  ]);
+
+  const organizationSchema = generateOrganizationSchema();
+  const combinedSchema = [breadcrumbSchema, organizationSchema];
+
   return (
     <div className="pt-16 overflow-hidden">
+      <SEO 
+        title="About Formonex | Leading IT Company in Pune & Bengaluru - Our Story & Mission"
+        description="Learn about Formonex's journey as a premier IT solutions company. Founded with a vision to transform businesses through technology. 4+ years of experience, 200+ projects, 150+ clients across Pune and Bengaluru."
+        keywords="About Formonex, IT Company History, Software Development Team, Company Mission Vision, Technology Experts Pune Bengaluru, Digital Transformation Leaders"
+        canonical="https://www.formonex.com/about"
+        structured={combinedSchema}
+      />
       {/* Hero Section with Advanced Design */}
       <section className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">
         {/* Animated Background Elements */}

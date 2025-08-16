@@ -19,6 +19,8 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { services } from '../data/company';
+import SEO from '../components/SEO';
+import { generateServiceSchema, generateBreadcrumbSchema } from '../utils/structuredData';
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState(services[0]);
@@ -73,8 +75,23 @@ const Services = () => {
     { number: "50+", label: "Expert Team", icon: Users }
   ];
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.formonex.com' },
+    { name: 'Services', url: 'https://www.formonex.com/services' }
+  ]);
+
+  const servicesSchema = services.map(service => generateServiceSchema(service));
+  const combinedSchema = [breadcrumbSchema, ...servicesSchema];
+
   return (
     <div className="pt-16 overflow-hidden">
+      <SEO 
+        title="IT Services & Solutions | Software Development, AI/ML, Cloud Integration - Formonex"
+        description="Comprehensive IT services including custom software development, AI/ML solutions, cloud integration, mobile app development, web development, and digital transformation. Expert team serving Pune and Bengaluru."
+        keywords="IT Services, Software Development Services, AI ML Solutions, Cloud Integration, Mobile App Development, Web Development, Digital Transformation, Custom Software, Enterprise Solutions"
+        canonical="https://www.formonex.com/services"
+        structured={combinedSchema}
+      />
       {/* Hero Section with Advanced Design */}
       <section className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white overflow-hidden">
         {/* Animated Background */}

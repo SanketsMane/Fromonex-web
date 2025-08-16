@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="formonexBrandGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="50%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="formonexBrandGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="formonexBrandGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="logoShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" flood-color="#000000" flood-opacity="0.15" stdDeviation="4"/>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle with Gradient -->
+  <circle cx="100" cy="100" r="95" fill="url(#formonexBrandGradient1)" filter="url(#logoShadow)"/>
+  
+  <!-- Inner Accent Circle -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="white" stroke-width="1" opacity="0.2"/>
+  
+  <!-- Main Letter F -->
+  <g transform="translate(100, 100)">
+    <!-- F Letter Structure -->
+    <path d="M-25 -40 L-25 40 L-15 40 L-15 5 L20 5 L20 -5 L-15 -5 L-15 -15 L25 -15 L25 -25 L-15 -25 L-15 -40 Z" 
+          fill="white" 
+          opacity="0.95"
+          filter="url(#glow)"/>
+    
+    <!-- Technology Elements -->
+    <g opacity="0.8">
+      <!-- Circuit Lines -->
+      <path d="M-5 -35 L30 -35 M-5 20 L30 20 M35 -30 L35 25" 
+            stroke="url(#formonexBrandGradient2)" 
+            stroke-width="2" 
+            opacity="0.6" 
+            stroke-linecap="round"/>
+      
+      <!-- Connection Nodes -->
+      <circle cx="30" cy="-35" r="3" fill="url(#formonexBrandGradient2)"/>
+      <circle cx="30" cy="20" r="3" fill="url(#formonexBrandGradient3)"/>
+      <circle cx="35" cy="-5" r="2" fill="white"/>
+      
+      <!-- Data Flow Elements -->
+      <rect x="25" y="-8" width="15" height="2" rx="1" fill="url(#formonexBrandGradient2)" opacity="0.7"/>
+      <rect x="25" y="8" width="12" height="2" rx="1" fill="white" opacity="0.6"/>
+      <rect x="25" y="15" width="8" height="2" rx="1" fill="url(#formonexBrandGradient3)" opacity="0.5"/>
+    </g>
+    
+    <!-- Innovation Accent -->
+    <g transform="rotate(45)" opacity="0.3">
+      <rect x="40" y="-1" width="8" height="2" rx="1" fill="white"/>
+      <rect x="45" y="-6" width="8" height="2" rx="1" fill="url(#formonexBrandGradient2)"/>
+    </g>
+  </g>
+  
+  <!-- Corner Decorations -->
+  <circle cx="25" cy="25" r="3" fill="url(#formonexBrandGradient2)" opacity="0.4"/>
+  <circle cx="175" cy="175" r="3" fill="white" opacity="0.4"/>
+  <circle cx="25" cy="175" r="2" fill="url(#formonexBrandGradient3)" opacity="0.3"/>
+  <circle cx="175" cy="25" r="2" fill="white" opacity="0.3"/>
+  
+  <!-- Company Name (Optional - can be removed for icon-only version) -->
+  <text x="100" y="185" font-family="Poppins, sans-serif" font-weight="600" font-size="14" fill="white" text-anchor="middle" opacity="0.8">
+    FORMONEX
+  </text>
+</svg>

@@ -11,6 +11,8 @@ import {
   CheckCircle
 } from 'lucide-react';
 import { testimonials } from '../data/testimonials';
+import SEO from '../components/SEO';
+import { generateBreadcrumbSchema } from '../utils/structuredData';
 
 const Testimonials: React.FC = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -30,8 +32,20 @@ const Testimonials: React.FC = () => {
     { icon: <CheckCircle className="w-8 h-8" />, number: "4.9/5", label: "Average Rating", color: "from-yellow-500 to-orange-500" }
   ];
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.formonex.com' },
+    { name: 'Testimonials', url: 'https://www.formonex.com/testimonials' }
+  ]);
+
   return (
     <div className="pt-16">
+      <SEO 
+        title="Client Testimonials | Formonex Reviews & Success Stories | IT Company Pune Bengaluru"
+        description="Read what our clients say about Formonex IT solutions. 150+ successful projects, 98% client satisfaction rate. Testimonials from software development, AI/ML, and digital transformation clients."
+        keywords="Formonex Reviews, Client Testimonials, IT Company Reviews Pune, Software Development Testimonials, Client Success Stories, IT Solutions Reviews Bengaluru"
+        canonical="https://www.formonex.com/testimonials"
+        structured={breadcrumbSchema}
+      />
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />

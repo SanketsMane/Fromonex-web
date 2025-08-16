@@ -12,6 +12,7 @@ import { companyInfo } from '../data/company';
 import { fadeInUp, staggerContainer } from '../utils/animations';
 import { useState } from 'react';
 import SEO from '../components/SEO';
+import { generateLocalBusinessSchema, generateBreadcrumbSchema } from '../utils/structuredData';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -165,13 +166,23 @@ const Contact = () => {
     );
   }
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.formonex.com' },
+    { name: 'Contact', url: 'https://www.formonex.com/contact' }
+  ]);
+
+  const puneBusinessSchema = generateLocalBusinessSchema('pune');
+  const bengaluruBusinessSchema = generateLocalBusinessSchema('bengaluru');
+  const combinedSchema = [breadcrumbSchema, puneBusinessSchema, bengaluruBusinessSchema];
+
   return (
     <div className="pt-16">
       <SEO 
-        title="Contact Formonex | IT Company in Pune & Bengaluru"
-        description="Contact Formonex for IT solutions. Offices in Kharadi, Pune and JP Nagar, Bengaluru. Software development, AI/ML, cloud services and more."
-        keywords="Contact IT Company Pune, Contact IT Company Bengaluru, Software Development Kharadi, AI ML Services JP Nagar, IT Solutions Contact"
+        title="Contact Formonex | Get IT Solutions Quote | Pune & Bengaluru Offices"
+        description="Contact Formonex for custom software development, AI/ML solutions & digital transformation. Offices in Kharadi (Pune) & JP Nagar (Bengaluru). Call +91-95355-08952 or email contact@formonex.com"
+        keywords="Contact IT Company Pune, Contact IT Company Bengaluru, Software Development Kharadi, AI ML Services JP Nagar, IT Solutions Contact, Get Quote Software Development"
         canonical="https://www.formonex.com/contact"
+        structured={combinedSchema}
       />
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">

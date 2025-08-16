@@ -33,6 +33,7 @@ import { Link } from 'react-router-dom';
 import { services, companyInfo } from '../data/company';
 import { testimonials } from '../data/testimonials';
 import SEO from '../components/SEO';
+import { generateOrganizationSchema, generateWebsiteSchema, generateLocalBusinessSchema } from '../utils/structuredData';
 
 const Home: React.FC = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -140,13 +141,21 @@ const Home: React.FC = () => {
     }
   ];
 
+  const organizationSchema = generateOrganizationSchema();
+  const websiteSchema = generateWebsiteSchema();
+  const puneBusinessSchema = generateLocalBusinessSchema('pune');
+  const bengaluruBusinessSchema = generateLocalBusinessSchema('bengaluru');
+
+  const combinedSchema = [organizationSchema, websiteSchema, puneBusinessSchema, bengaluruBusinessSchema];
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 overflow-hidden">
       <SEO 
-        title="Formonex | Top IT Company in Pune and Bengaluru"
-        description="Leading IT company delivering innovative solutions in AI, cloud computing, and digital transformation. Offices in Kharadi, Pune and JP Nagar, Bengaluru."
-        keywords="Top IT Company in Pune, Top IT Company in Bengaluru, Software Development in Kharadi Pune, AI/ML Services in JP Nagar Bengaluru, Cloud Integration, Digital Marketing, ERP CRM Solutions"
+        title="Formonex | Leading IT Solutions & Software Development Company in Pune & Bengaluru"
+        description="Premier IT company in Pune (Kharadi) and Bengaluru (JP Nagar) delivering cutting-edge software development, AI/ML solutions, cloud integration & digital transformation. 150+ satisfied clients, 200+ projects completed."
+        keywords="IT Company Pune, IT Company Bengaluru, Software Development Kharadi, AI ML Services JP Nagar, Custom Software Development, Cloud Integration Services, Digital Transformation, ERP CRM Solutions, Mobile App Development, Web Development, Data Analytics, Automation Solutions"
         canonical="https://www.formonex.com"
+        structured={combinedSchema}
       />
       {/* Animated Background Elements */}
       <div className="fixed inset-0 pointer-events-none">

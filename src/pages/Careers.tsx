@@ -14,6 +14,8 @@ import {
 import { careerPositions, type CareerPosition } from '../data/careers';
 import { fadeInUp, staggerContainer } from '../utils/animations';
 import { useState } from 'react';
+import SEO from '../components/SEO';
+import { generateOrganizationSchema, generateBreadcrumbSchema } from '../utils/structuredData';
 
 const Careers = () => {
   const [selectedDepartment, setSelectedDepartment] = useState('all');
@@ -62,8 +64,23 @@ const Careers = () => {
     "Mental health support and counseling"
   ];
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.formonex.com' },
+    { name: 'Careers', url: 'https://www.formonex.com/careers' }
+  ]);
+
+  const organizationSchema = generateOrganizationSchema();
+  const combinedSchema = [breadcrumbSchema, organizationSchema];
+
   return (
     <div className="pt-16">
+      <SEO 
+        title="Careers at Formonex | Join Our IT Team in Pune & Bengaluru | Software Development Jobs"
+        description="Explore exciting career opportunities at Formonex. Join our innovative IT team in Pune (Kharadi) and Bengaluru (JP Nagar). Software developer, AI/ML engineer, and digital marketing positions available."
+        keywords="Careers Formonex, IT Jobs Pune, IT Jobs Bengaluru, Software Developer Jobs, AI ML Engineer Jobs, Digital Marketing Careers, Web Developer Jobs Kharadi, Tech Jobs JP Nagar"
+        canonical="https://www.formonex.com/careers"
+        structured={combinedSchema}
+      />
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
